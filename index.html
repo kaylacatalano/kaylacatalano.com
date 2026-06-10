@@ -43,24 +43,23 @@
 
     .scene {
       position: absolute;
-      opacity: 0;
-      animation: fadeSwap 12s infinite;
     }
 
     .video-scene {
-      animation-delay: 0s;
+      opacity: 1;
+      animation: videoIntro 7s forwards;
     }
 
     .text-scene {
-      animation-delay: 6s;
+      opacity: 0;
+      animation: textReveal 7s forwards;
     }
 
     .video-frame {
       width: 90vw;
-      max-width: 500px;
+      max-width: 650px;
       aspect-ratio: 1 / 1;
       overflow: hidden;
-      background: #0f0f0f;
     }
 
     .video-frame video {
@@ -91,17 +90,17 @@
       opacity: 0.7;
     }
 
-    @keyframes blink {
-      50% { opacity: 0; }
-    }
+   @keyframes videoIntro {
+  0% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { opacity: 0; }
+}
 
-    @keyframes fadeSwap {
-      0% { opacity: 0; }
-      10% { opacity: 1; }
-      40% { opacity: 1; }
-      50% { opacity: 0; }
-      100% { opacity: 0; }
-    }
+@keyframes textReveal {
+  0% { opacity: 0; }
+  70% { opacity: 0; }
+  100% { opacity: 1; }
+}
   </style>
 </head>
 
