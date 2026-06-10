@@ -19,7 +19,7 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-}
+    }
 
     .container {
       width: 90%;
@@ -27,46 +27,69 @@
       text-align: center;
     }
 
- .video-frame {
-  width: 100%;
-  max-width: 500px;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  margin: 0 auto 0px auto;
-  background: #0f0f0f;
-}
+    .video-frame {
+      width: 100%;
+      max-width: 500px;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      margin: 0 auto;
+      background: #0f0f0f;
+    }
 
-.video-frame video {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  transform: scale(0.65);
-}
+    .video-frame video {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transform: scale(0.65);
+    }
 
-  .email-link {
-  display: inline-block;
-  margin-top: 18px;
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  letter-spacing: 1px;
-}
+    .email-link {
+      display: inline-block;
+      margin-top: 18px;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
 
-  .email-link:hover {
-  color: #888;
-}
-    
-<a class="email-link" href="mailto:kaylamcatalano@gmail.com">
-  contact
-</a>
+    .email-link:hover {
+      color: #888;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 30px;
+      color: #888;
+      text-decoration: none;
+    }
+
+    .back:hover {
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="video-frame">
+      <video autoplay muted loop playsinline>
+        <source src="vineyard.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <a class="email-link" href="mailto:kaylamcatalano@gmail.com">
+      contact
+    </a>
+
+    <br>
 
     <a class="back" href="/">
       ← back
     </a>
 
   </div>
-
 </body>
 </html>
