@@ -44,86 +44,23 @@
   display: block;
   transform: scale(0.65);
 }
+
+  .email-link {
+  display: inline-block;
+  margin-top: 18px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+  .email-link:hover {
+  color: #888;
+}
     
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-top: -15px;
-    }
-
-    input,
-    textarea {
-      background: transparent;
-      border: 1px solid #333;
-      color: white;
-      padding: 12px;
-      font-size: 14px;
-    }
-
-    textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-
-    button {
-      background: white;
-      color: black;
-      border: none;
-      padding: 12px;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    .back {
-      display: inline-block;
-      margin-top: 30px;
-      color: #888;
-      text-decoration: none;
-    }
-
-    .back:hover {
-      color: white;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="container">
-
-    <div class="video-frame">
-  <video autoplay muted loop playsinline>
-    <source src="vineyard.mp4" type="video/mp4">
-  </video>
-</div>
-
-    <form action="https://formspree.io/f/mykapyea" method="POST">
-
-      <input
-        type="text"
-        name="name"
-        placeholder="name"
-        required
-      >
-
-      <input
-        type="email"
-        name="email"
-        placeholder="email"
-        required
-      >
-
-      <textarea
-        name="message"
-        placeholder="message"
-        required
-      ></textarea>
-
-      <button type="submit">
-        send
-      </button>
-
-    </form>
+<a class="email-link" href="mailto:kaylamcatalano@gmail.com">
+  contact
+</a>
 
     <a class="back" href="/">
       ← back
