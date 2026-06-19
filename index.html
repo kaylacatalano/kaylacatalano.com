@@ -46,9 +46,9 @@
     }
 
     .video-scene {
-      opacity: 1;
-      animation: videoIntro 7s forwards;
-    }
+  opacity: 1;
+  animation: hideVideo 7s forwards;
+}
 
     .text-scene {
       opacity: 0;
@@ -116,22 +116,32 @@
     opacity: 0;
   }
 }
-   @keyframes videoIntro {
-  0% { opacity: 1; }
-  70% { opacity: 1; }
-  100% { opacity: 0; }
-}
 
 @keyframes textReveal {
   0% { opacity: 0; }
-  85% { opacity: 0; }
+  95% { opacity: 0; }
   100% { opacity: 1; }
 }
 
-    @keyframes shutterClose {
-  0% { height: 0%; }
-  70% { height: 0%; }
+   @keyframes shutterClose {
+  0%   { height: 0%; }
+  50%  { height: 0%; }
+  75%  { height: 15%; }
   100% { height: 50%; }
+}
+
+    @keyframes hideVideo {
+  0% {
+    visibility: visible;
+  }
+
+  99% {
+    visibility: visible;
+  }
+
+  100% {
+    visibility: hidden;
+  }
 }
     
   </style>
