@@ -152,7 +152,7 @@
 
 <div class="scene video-scene">
   <div class="video-frame">
-    <video autoplay muted loop playsinline>
+    <video muted loop playsinline>
       <source src="vineyard.mp4" type="video/mp4">
     </video>
 
@@ -182,7 +182,7 @@
     const video = document.querySelector(".video-frame video");
 
     video.addEventListener("loadedmetadata", () => {
-      video.currentTime = 1.5;
+      video.currentTime = 3;
   });
 
     video.addEventListener("seeked", () => {
