@@ -181,10 +181,14 @@
   <script>
     const video = document.querySelector(".video-frame video");
 
-     video.addEventListener("loadedmetadata", () => {
-    video.currentTime = 1.5;
-    video.playbackRate = 2.0;
+    video.addEventListener("loadedmetadata", () => {
+      video.currentTime = 1.5;
   });
+
+    video.addEventListener("seeked", () => {
+      video.playbackRate = 2.0;
+      video.play();
+  }, { once: true });
 </script>
 
 </body>
