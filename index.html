@@ -47,12 +47,12 @@
 
     .video-scene {
   opacity: 1;
-  animation: hideVideo 9s forwards;
+  animation: hideVideo 7.5s forwards;
 }
 
     .text-scene {
       opacity: 0;
-      animation: textReveal 9s forwards;
+      animation: textReveal 7.5s forwards;
     }
 
     .video-frame {
@@ -72,7 +72,7 @@
   background: #0f0f0f;
   z-index: 2;
   pointer-events: none;
-  animation: shutterClose 9s forwards;
+  animation: shutterClose 7.5s forwards;
 }
 
 .top-shutter {
@@ -152,7 +152,7 @@
 
 <div class="scene video-scene">
   <div class="video-frame">
-    <video muted loop playsinline>
+    <video autoplay muted loop playsinline>
       <source src="vineyard.mp4" type="video/mp4">
     </video>
 
@@ -180,15 +180,7 @@
 
   <script>
     const video = document.querySelector(".video-frame video");
-
-    video.addEventListener("loadedmetadata", () => {
-      video.currentTime = 3;
-  });
-
-    video.addEventListener("seeked", () => {
-      video.playbackRate = 2.0;
-      video.play();
-  }, { once: true });
+    video.playbackRate = 2.0;
 </script>
 
 </body>
